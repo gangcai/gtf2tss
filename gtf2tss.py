@@ -38,13 +38,13 @@ for line in open(gtf):
 		right_tss=tss+flanking+1
 		if left_tss<1:
 			left_tss=1
-		outfile.write(chr_+"\t"+str(left_tss)+"\t"+str(right_tss)+"\t"+name+"\t1000\t"+strand_+"\n")
+		outfile.write(chr_+"\t"+str(left_tss)+"\t"+str(right_tss)+"\t"+name+"\t"+str(flanking)+"\t"+strand_+"\n")
 	if strand_ == "-":
 		tss=int(e_)
 		left_tss=tss-flanking
 		right_tss=tss+flanking+1
 		if left_tss<1:
 			left_tss=1
-		outfile.write(chr_+"\t"+str(left_tss)+"\t"+str(right_tss)+"\t"+name+"\t1000\t"+strand_+"\n")
+		outfile.write(chr_+"\t"+str(left_tss)+"\t"+str(right_tss)+"\t"+name+"\t"+str(flanking)+"\t"+strand_+"\n")
 	#chr1    HAVANA  gene    11869   14409   .       +
 outfile.close()
